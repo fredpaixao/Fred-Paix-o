@@ -19,6 +19,9 @@ repositories {
     maven { url = uri("https://kotlin.bintray.com/ktor") }
 }
 
+tasks.create("stage") {
+    dependsOn("installDist")
+}
 
 
 tasks.withType<KotlinCompile>() {
